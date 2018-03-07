@@ -1,2 +1,7 @@
-# ng5material
-Angular 5 with angular material
+# Angular with material
+
+```
+yarn add @angular/cdk @angular/material @angular/animations hammerjs
+
+yarn start
+```
