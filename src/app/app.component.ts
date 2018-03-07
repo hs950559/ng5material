@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  isChecked = false;
+
+  onChange(event){
+    console.log(event.source.value);
+    console.log(event.checked);
+  }
 }

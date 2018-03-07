@@ -1,4 +1,9 @@
-<mat-checkbox>Check me!</mat-checkbox>
+<mat-checkbox
+#myChk
+value="2"
+[checked]="isChecked"
+(change)="onChange($event)"
+>Check me!</mat-checkbox>
 
-
+<p *ngIf="myChk.checked">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate rerum accusantium ipsa debitis minima, molestias totam magnam? Nostrum magnam eos tenetur consequatur provident aspernatur quis architecto velit atque! Quis, possimus.</p>
 <router-outlet></router-outlet>
