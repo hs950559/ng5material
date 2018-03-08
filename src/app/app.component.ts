@@ -7,17 +7,13 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  categories = [
-    {name: 'Books'},
-    {name: 'Movies'},
-    {name: 'Toys'},
-    {name: 'Fashion'}
-  ];
+  progress = 10;
 
-  selectCategory(c) {
-    this.categories.filter(category => c !== category)
-        .forEach( category => category['selected'] = false );
+  timer = setInterval( () => {
+    this.progress++;
 
-    c.selected = !c.selected;
-  }
+    if ( this.progress === 100 ) {
+      clearInterval(this.timer);
+    }
+  }, 100);
 }
