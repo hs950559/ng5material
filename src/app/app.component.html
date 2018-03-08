@@ -1,1 +1,23 @@
-<span matTooltip="Tooltip!" matTooltipPosition="right">I have a tooltip</span>
+<h1>Tab</h1>
+<mat-tab-group>
+  <mat-tab label="Billing">Content 1</mat-tab>
+  <mat-tab label="Shipping">Content 2</mat-tab>
+</mat-tab-group>
+
+<h3>Tab with custom label</h3>
+<mat-tab-group>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        The <em>best</em> pasta
+      </ng-template>
+      <h4>Best pasta restaurants</h4>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, ipsa.</p>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon>thumb_down</mat-icon> The worst sushi
+      </ng-template>
+      <h1>Terrible sushi restaurants</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </mat-tab>
+  </mat-tab-group>

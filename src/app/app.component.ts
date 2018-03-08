@@ -7,13 +7,4 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  progress = 10;
-
-  timer = setInterval( () => {
-    this.progress++;
-
-    if ( this.progress === 100 ) {
-      clearInterval(this.timer);
-    }
-  }, 100);
 }
