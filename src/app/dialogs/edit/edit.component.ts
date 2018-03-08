@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-edit',
@@ -6,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit.component.scss']
 })
 export class EditComponent implements OnInit {
-
-  constructor() { }
+  constructor(@Inject(MAT_DIALOG_DATA) public dataFromParent: any) { }
 
   ngOnInit() {
   }

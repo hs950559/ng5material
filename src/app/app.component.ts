@@ -12,7 +12,12 @@ export class AppComponent {
   constructor(private dialog: MatDialog) {}
 
   openDialog() {
-    this.dialog.open(EditComponent)
+    this.dialog.open(EditComponent, {
+      data: {
+        name: 'Hemant',
+        loc: 'Hyderabad'
+      }
+    })
     .afterClosed()
     .subscribe((result) => {
       console.log(result);
