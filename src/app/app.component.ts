@@ -7,7 +7,17 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  selectedDate = new FormControl(new Date());
-  minDate = new Date(2018, 3, 8);
-  maxDate = new Date(2018, 3, 15);
+  categories = [
+    {name: 'Books'},
+    {name: 'Movies'},
+    {name: 'Toys'},
+    {name: 'Fashion'}
+  ];
+
+  selectCategory(c) {
+    this.categories.filter(category => c !== category)
+        .forEach( category => category['selected'] = false );
+
+    c.selected = !c.selected;
+  }
 }
