@@ -13,17 +13,20 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-
+import { EditComponent } from './dialogs/edit/edit.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EditComponent
   ],
+  entryComponents: [EditComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -40,7 +43,8 @@ import { FormsModule } from '@angular/forms';
     MatChipsModule,
     MatProgressSpinnerModule,
     MatTooltipModule,
-    MatTabsModule
+    MatTabsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
