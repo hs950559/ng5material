@@ -1,20 +1,13 @@
-// Here you can add other styles
-@font-face {
-  font-family: 'SEGOEUIL';
-  src: url('../assets/fonts/SEGOEUIL.eot');
-  src: local('SEGOEUIL'), url('../assets/fonts/SEGOEUIL.woff') format('woff'), url('../assets/fonts/SEGOEUIL.ttf') format('truetype');
-}
-
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url(../assets/fonts/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: url(MaterialIcons-Regular.eot); /* For IE6-8 */
   src: local('Material Icons'),
        local('MaterialIcons-Regular'),
-       url(../assets/fonts/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
-       url(../assets/fonts/iconfont/MaterialIcons-Regular.woff) format('woff'),
-       url(../assets/fonts/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+       url(MaterialIcons-Regular.woff2) format('woff2'),
+       url(MaterialIcons-Regular.woff) format('woff'),
+       url(MaterialIcons-Regular.ttf) format('truetype');
 }
 
 .material-icons {

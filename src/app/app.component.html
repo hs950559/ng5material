@@ -1,13 +1,7 @@
 <mat-form-field>
-  <span matPrefix>Mr. &nbsp;</span>
-  <input matInput placeholder="Your Name"  required #username="ngModel" [(ngModel)]="value">
-  <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-      X
-  </button>
-  <span matSuffix>kool</span>
-  <mat-hint align="start">Don't disclose personal info</mat-hint>
-  <mat-hint align="end">12 / 256</mat-hint>
-  <mat-error *ngIf="username.invalid && username.errors.required">
-    Username is <strong>required</strong>
-  </mat-error>
-</mat-form-field>
+    <input [min]="minDate" [max]="maxDate" matInput (focus)="picker.open()" [matDatepicker]="picker" placeholder="Choose a date" [value]="selectedDate.value">
+    <mat-datepicker-toggle matSuffix [for]="picker">
+        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+    </mat-datepicker-toggle>
+    <mat-datepicker #picker touchUi="true"></mat-datepicker>
+  </mat-form-field>
